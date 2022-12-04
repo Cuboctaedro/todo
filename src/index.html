@@ -7,16 +7,98 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
   <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
-    </div>
+    <section class="section">
+      <div class="container">
+  
+          <div class="block">
+              <h2 class="title is-5">Task List</h2>
+
+              <div class="field has-addons pb-4">
+                  <p class="control">
+                    <button class="button" data-filter="all">Show all</button>
+                  </p>
+                  <p class="control">
+                    <button class="button" data-filter="incomplete">Show incomplete</button>
+                  </p>
+                  <p class="control">
+                    <button class="button" data-filter="complete">Show complete</button>
+                  </p>
+              </div>
+                
+
+              <table class="table is-fullwidth">
+                  <thead>
+                      <tr>
+                          <th>Task</th>
+                          <th>
+                              <button class="button is-outlined" data-sort="difficulty">Difficulty</button>
+                          </th>
+                          <th>
+                              <button class="button is-outlined" data-sort="time">Time</button>
+                          </th>
+                          <th>Completed</th>
+                      </tr>
+                  </thead>
+                  <tfoot>
+                      <tr>
+                          <th>Task</th>
+                          <th>Difficulty</th>
+                          <th>Time</th>
+                          <th>Completed</th>
+                      </tr>
+                  </tfoot>
+                  <tbody>
+
+                      <tr>
+                          <td>
+                              'Learn JavaScript'
+                          </td>
+                          <td>
+                              7
+                          </td>
+                          <td>
+                              50
+                          </td>
+                          <td>
+                              <span class="tag is-danger">NO</span>
+                          </td>
+                      </tr>
+
+                      <tr>
+                          <td>
+                              'Clean house'
+                          </td>
+                          <td>
+                              4
+                          </td>
+                          <td>
+                              3
+                          </td>
+                          <td>
+                              <span class="tag is-success">YES</span>
+                          </td>
+                      </tr>
+
+                  </tbody>
+              </table>
+
+          </div>
+
+      </div>
   </section>
+
+  <section>
+      <div class="container">
+          <div class="block">
+              <h2 class="title is-5">Add new Task</h2>
+
+              <include src="src/form.html"></include>
+
+          </div>
+      </div>
+  </section>
+
+
   <script src="index.js"></script>
   </body>
 </html>
