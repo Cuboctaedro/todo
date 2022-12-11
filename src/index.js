@@ -1,6 +1,6 @@
 import { createTableRow } from './views/table-row';
 import { dummyTasks } from './data/dummy-data';
-
+// import { getTasks } from './persistence/get-tasks';
 
 
 
@@ -73,6 +73,6 @@ function updateTable(taskList) {
     });
 }
 
-const tasks = getTasks();
+// const tasks = getTasks();
 
-updateTable(tasks);
+updateTable(dummyTasks);
