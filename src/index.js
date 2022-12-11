@@ -73,4 +73,6 @@ function updateTable(taskList) {
     });
 }
 
-updateTable(dummyTasks);
+const tasks = getTasks();
+
+updateTable(tasks);
