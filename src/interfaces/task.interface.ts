@@ -6,3 +6,5 @@ export interface Task {
     readonly isCompleted: boolean
     markComplete(): void
 }
+
+export type StoredTask = Omit<Task, 'markComplete'>;

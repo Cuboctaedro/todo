@@ -1,4 +1,8 @@
-export function sortByProperty(list, prop = null) {
+import { Task } from '../../interfaces/task.interface';
+
+type TableKeyProperty = 'time' | 'difficulty' | 'description';
+
+export function sortByProperty(list: Array<Task>, prop: TableKeyProperty) {
     const listCopy = list.slice();
 
     if (prop === 'time') {
